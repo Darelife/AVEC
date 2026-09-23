@@ -13,3 +13,8 @@ Just like what I saw at google, they treat each PR (CL: Change list) as a single
 TLDR: Live Editing -> Automated commits in a new branch -> PR when the user wants to make a proper commit with a description -> merge into main branch via CLI or GH.
 
 PS: Damn, i've never actually been more clear about what I want with this project. Earlier I was randomly telling AI about what I want in a vague way, and it would do random stuff. But now, Ik what I want exactly, and have a logic in mind for its working.
+
+# Coding Style
+
+For now, I don't care about the file structure, but I do care about the code. I want the code to be clean, and easy to understand.
+I also want comments above each function, or a class, explaining what it does, how it works, and why we've implemented it this way.
