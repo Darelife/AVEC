@@ -1,4 +1,4 @@
-# Automated Version Control (AVEC)
+# Automated VErsion CONtrol (AVECON)
 
 I want a system in which, suppose in a hackathon, we're working on the code together. Just like a gdoc, or via `live share`, we could be working on the code together at the same time. Now, if i want proper version control implemented, with credits for everyone's work, with the exact changes made by each person, and the ability to revert to previous versions, via regular version control systems, without spending time on merge conflicts, I want a system that can do this automatically.
 
