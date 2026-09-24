@@ -18,3 +18,12 @@ PS: Damn, i've never actually been more clear about what I want with this projec
 
 For now, I don't care about the file structure, but I do care about the code. I want the code to be clean, and easy to understand.
 I also want comments above each function, or a class, explaining what it does, how it works, and why we've implemented it this way.
+
+
+# Version Control
+
+By default, we'll use JJ. We could use an interface called VC, and in that, we could have JJ and Git as children. But yeah by default we'll use JJ. 
+We can use temporary blocks that'll store the code that's not yet commited, Each chunk should have a different author, different file, and contiguous code lines.
+If we find 2 or more chunks that edit the same line, with different authors, we'll break them down even further, with the help of the timestamp of the changes. By default a chunk will have the same timestamp,
+But, before adding a change in the chunk, when we realize that 2 chunks might collide now, we'll create a new chunk for it.
+Also each chunk will have a parent, and a child pointer. Just one of each, ensuring that it's always serial.

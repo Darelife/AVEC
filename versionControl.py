@@ -37,11 +37,6 @@ class ChangeChunk:
 class VersionControl:
 	"""Write change chunks as JJ commits, in the order received."""
 
-	# What: Initialize a VersionControl object for one repository.
-	# How: Convert the supplied path to an absolute Path, then ask JJ for the
-	#      repository root as an immediate validity check.
-	# Why: An absolute path makes later file operations unambiguous, and the
-	#      early JJ command fails fast when the path is not a JJ repository.
 	def __init__(self, repository: str = ".") -> None:
 		self.repository = Path(repository).resolve()
 		self._run_jj("root")
@@ -114,13 +109,6 @@ class VersionControl:
 			"--no-graph",
 		).stdout.strip()
 
-	# What: Check that a ChangeChunk contains the metadata required to make a
-	#       meaningful commit.
-	# How: Strip surrounding whitespace before checking the author name, email,
-	#      and message; separately test that the files mapping is non-empty and
-	#      raise ValueError with a targeted explanation when a check fails.
-	# Why: Rejecting invalid input before touching files or JJ avoids partial
-	#      work and gives callers a clear correction to make.
 	@staticmethod
 	def _validate_chunk(chunk: ChangeChunk) -> None:
 		# Whitespace-only names and emails cannot provide useful JJ attribution.
